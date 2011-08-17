@@ -66,8 +66,8 @@
 
         var settings = $.extend($(window).data('coolTypeDefaults'), options);
 
-        if (!settings.inline) $this.append('<div class="coolType"></div>');
-        else $this.append('<span class="coolType"></span>');
+        if (!settings.inline) $this.append('<div class="coolType" style="' + settings.style + '"></div>');
+        else $this.append('<span class="coolType" style="' + settings.style + '"></span>');
 
         var $container = $this.find('.coolType:last-child');
         $container.data('coolTypeText', new String());

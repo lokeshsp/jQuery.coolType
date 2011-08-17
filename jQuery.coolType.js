@@ -94,7 +94,7 @@
             $caret.html('&nbsp;');
         }
 
-        var blinkId = setInterval(blinkCaret, 300);
+        var blinkId = setInterval(blinkCaret, settings.caretBlinkSpeed);
 
         var index = 0;
         setTimeout(function ()
@@ -117,7 +117,7 @@
                     clearInterval(intervalId);
                     if (settings.playSound)
                         soundManager.stop('coolType');
-                    var blinkId = setInterval(blinkCaret, 300);
+                    var blinkId = setInterval(blinkCaret, settings.caretBlinkSpeed);
                     setTimeout(function ()
                     {
                         clearInterval(blinkId);

@@ -66,12 +66,12 @@
 
         var settings = $.extend($(window).data('coolTypeDefaults'), options);
 
-        if (!settings.inline) $this.append('<div class="coolType" style="' + settings.style + '"></div>');
-        else $this.append('<span class="coolType" style="' + settings.style + '"></span>');
+        if (!settings.inline) $this.append('<div class="coolType"></div>');
+        else $this.append('<span class="coolType"></span>');
 
         var $container = $this.find('.coolType:last-child');
         $container.data('coolTypeText', new String());
-        $container.append(settings.insertBefore + '<span class="coolTypeLineContainer"></span><span id="coolTypeCaret">' + settings.caretChar + '</span>' + settings.insertAfter);
+        $container.append(settings.insertBefore + '<span style="' + settings.style + '" class="coolTypeLineContainer"></span><span id="coolTypeCaret">' + settings.caretChar + '</span>' + settings.insertAfter);
 
         var $lineContainer = $container.find('.coolTypeLineContainer');
         var $caret = $container.find('#coolTypeCaret');

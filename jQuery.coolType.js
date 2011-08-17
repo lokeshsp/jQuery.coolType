@@ -33,9 +33,13 @@
                 delayAfter: 0,
                 style: new String(),
                 inline: false,
-                caretBlinkSpeed: 300
+                caretBlinkSpeed: 300,
+                scrollToBottom: false
             }, options)
             $(window).data('coolTypeDefaults', defaultSettings);
+
+            if (defaultSettings.scrollToBottom && !$.scrollTo)
+                throw 'You are missing a reference to the scrollTo jQuery plugin. Visit http://plugins.jquery.com/project/ScrollTo to obtain it.';
 
             if (defaultSettings.playSound && window['soundManager'] == undefined)
                 throw 'You are missing a reference to the sound manager script. Visit http://www.schillmania.com/projects/soundmanager2/ to obtain it.';
@@ -65,6 +69,11 @@
         var $this = this;
 
         var settings = $.extend($(window).data('coolTypeDefaults'), options);
+
+        if (settings.scrollToBottom && !$.scrollTo)
+            throw 'You are missing a reference to the scrollTo jQuery plugin. Visit http://plugins.jquery.com/project/ScrollTo to obtain it.';
+        if (settings.playSound && window['soundManager'] == undefined)
+            throw 'You are missing a reference to the sound manager script. Visit http://www.schillmania.com/projects/soundmanager2/ to obtain it.';
 
         if (!settings.inline) $this.append('<div class="coolType" style="' + settings.style + '"></div>');
         else $this.append('<span class="coolType" style="' + settings.style + '"></span>');
@@ -111,6 +120,8 @@
                     var newText = $container.data('coolTypeText') + char;
                     $container.data('coolTypeText', newText);
                     $lineContainer.text(newText);
+                    if (settings.scrollToBottom)
+                        $this.scrollTo('100%', 0, { axis: 'y' });
                 }
                 else
                 {

@@ -71,7 +71,7 @@
 
         var $container = $this.find('.coolType:last-child');
         $container.data('coolTypeText', new String());
-        $container.append(settings.insertBefore).append('<span class="coolTypeLineContainer"></span>').append('<span id="coolTypeCaret">' + settings.caretChar + '</span>').append(settings.insertAfter);
+        $container.append(settings.insertBefore + '<span class="coolTypeLineContainer"></span><span id="coolTypeCaret">' + settings.caretChar + '</span>' + settings.insertAfter);
 
         var $lineContainer = $container.find('.coolTypeLineContainer');
         var $caret = $container.find('#coolTypeCaret');

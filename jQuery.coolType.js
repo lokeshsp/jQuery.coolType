@@ -33,7 +33,7 @@
                 delayAfter: 0,
                 style: new String(),
                 inline: false,
-                caretBlinkSpeed: 50
+                caretBlinkSpeed: 300
             }, options)
             $(window).data('coolTypeDefaults', defaultSettings);
 

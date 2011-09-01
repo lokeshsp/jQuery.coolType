@@ -88,7 +88,7 @@
         function blinkCaret()
         {
             if ($caret.data('Visible')) hideCaret();
-            else showCaret();
+            alert('test change in trunk');
         }
 
         function showCaret()

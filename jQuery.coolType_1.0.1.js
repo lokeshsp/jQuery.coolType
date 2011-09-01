@@ -12,7 +12,7 @@
 //   *                                                                        *
 //   *  You should have received a copy of the GNU General Public License     *
 //   *  along with this program.  If not, see <http://www.gnu.org/licenses/>. *
-//   *                                                                        *s
+//   *                                                                        *
 //   **************************************************************************
 
 (function ($)
@@ -94,7 +94,7 @@
         function showCaret()
         {
             $caret.data('Visible', true);
-            alert('I am a change in trunk on the same line as a change in a branch that has not been merged to trunk!');
+            $caret.html(settings.caretChar);
         }
 
         function hideCaret()

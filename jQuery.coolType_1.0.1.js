@@ -94,7 +94,7 @@
         function showCaret()
         {
             $caret.data('Visible', true);
-            $caret.html(settings.caretChar);
+            alert('I am a change in trunk on the same line as a change in a branch that has not been merged to trunk!');
         }
 
         function hideCaret()

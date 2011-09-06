@@ -1,4 +1,4 @@
-﻿//   **************************************************************************
+ //   **************************************************************************
 //   *                                                                        *
 //   *  This program is free software: you can redistribute it and/or modify  *
 //   *  it under the terms of the GNU General Public License as published by  *
@@ -35,7 +35,7 @@
                 inline: false,
                 caretBlinkSpeed: 300,
                 scrollToBottom: false
-            }, options)
+            }, options);
             $(window).data('coolTypeDefaults', defaultSettings);
 
             if (defaultSettings.scrollToBottom && !$.scrollTo)
